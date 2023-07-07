@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JobFreak </title>
+  <link rel="stylesheet" href="leftpanel.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-grid-alt'></i>
+      <div class="logo_name">JobFreak</div>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="home.html">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="contact1.html">
+          <i class='bx bx-phone'></i>
+          <span class="links_name">Contact</span>
+        </a>
+        <span class="tooltip">Contact</span>
+      </li>
+      <li>
+        <a href="information.html">
+          <i class='bx bx-data'></i>
+          <span class="links_name">Information</span>
+        </a>
+        <span class="tooltip">Information</span>
+      </li>
+      <li>
+        <a href="guide.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Guide</span>
+        </a>
+        <span class="tooltip">Guide</span>
+      </li>
+    </ul>
+  </div>
+  <div class="content-area" id="content">
+    <!-- Initial content -->
+    <h2>Welcome to the Left Panel Example!</h2>
+    <p>Select a component from the left panel to display its content here.</p>
+  </div>
+  <script>
+    function showContent(component) {
+      var contentDiv = document.getElementById('content');
+      var content = '';
+
+      switch (component) {
+        case 'home':
+          content = '<h2>Home</h2><p>This is the Home content.</p>';
+          break;
+        case 'contact':
+          content = '<h2>Contact</h2><p>This is the Contact information.</p>';
+          break;
+        case 'information':
+          content = '<h2>Information</h2><p>This is the Information content.</p>';
+          break;
+        case 'guide':
+          content = '<h2>Guide</h2><p>This is the Guide content.</p>';
+          break;
+        default:
+          content = '<h2>Welcome to the Left Panel Example!</h2><p>Select a component from the left panel to display its content here.</p>';
+          break;
+      }
+      contentDiv.innerHTML = content;
+    }
+  </script>
+      <script src="sidebar.js"></script>
+</body>
+
+</html>
